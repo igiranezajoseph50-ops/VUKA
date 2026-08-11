@@ -8,6 +8,7 @@ package main
 import (
 	"context"
 	"errors"
+	"fmt"
 	"log/slog"
 	"net"
 	"net/http"
@@ -85,6 +86,19 @@ func run(log *slog.Logger) error {
 	ledgerSvc := ledger.NewService(pool, idem, registry)
 	if cfg.FxRateRWFKES > 0 {
 		ledgerSvc.SetDefaultFxRate(cfg.FxRateRWFKES)
+	}
+
+	// Bootstrap the ledger schema on every start (idempotent). This is what
+	// makes the engine deployable to ANY empty PostgreSQL — Render's managed
+	// DB never runs deploy/init.sql the way the local compose does, so the
+	// engine must create its own tables if they are missing.
+	{
+		seedCtx, cancel := context.WithTimeout(ctx, 30*time.Second)
+		defer cancel()
+		if err := ledgerSvc.EnsureSchema(seedCtx); err != nil {
+			return fmt.Errorf("ensure ledger schema: %w", err)
+		}
+		log.Info("ledger schema ready")
 	}
 
 	// Seed the SETTLEMENT accounts used by cross-border transfers.
