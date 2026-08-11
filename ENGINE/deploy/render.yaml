@@ -13,7 +13,7 @@ services:
     name: vuka
     runtime: docker
     plan: free
-    region: frankfurt
+    region: oregon
     dockerfilePath: ENGINE/deploy/Dockerfile
     dockerContext: .
     envVars:
