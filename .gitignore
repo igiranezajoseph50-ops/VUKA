@@ -20,6 +20,12 @@ backups/
 # Python gateway virtualenv (99MB of site-packages — not source)
 ENGINE/python-iso-gateway/.venv/
 
+# Python build junk
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
 # OS / editor
 .DS_Store
 .vscode/

@@ -1,8 +1,0 @@
-fastapi>=0.110
-uvicorn>=0.29
-grpcio>=1.60
-lxml>=5.0
-httpx>=0.27
-
-[dev]
-pytest>=8.0
