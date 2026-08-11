@@ -1,0 +1,27 @@
+# Secrets & local config — NEVER commit these
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa
+id_ed25519
+.pgpass
+
+# Build artifacts
+**/node_modules
+**/dist
+**/.next
+*.log
+*.dump
+backups/
+/tmp/
+
+# Python gateway virtualenv (99MB of site-packages — not source)
+ENGINE/python-iso-gateway/.venv/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+*.swp

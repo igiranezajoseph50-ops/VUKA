@@ -1,0 +1,12 @@
+# Build-context exclusions for the VUKA Docker image (see ENGINE/deploy/Dockerfile)
+.git
+**/node_modules
+**/dist
+backups
+*.dump
+*.log
+.vscode
+.idea
+**/*.test.*
+**/vuka-engine
+**/.next

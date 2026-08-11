@@ -1,0 +1,40 @@
+# ============================================================================
+# VUKA — Render Blueprint (deploy from this repo with one click)
+#
+#   New Blueprint -> select this repo -> Render provisions:
+#     1.  a Web Service  (Docker image, single port 8080)
+#     2.  a Postgres database  (free tier, expires after 90 days — swap to
+#         Neon/Supabase free if you want a non-expiring DB)
+#   Environment variables marked "sync: false" must be filled after creation.
+# ============================================================================
+
+services:
+  - type: web
+    name: vuka
+    runtime: docker
+    plan: free
+    region: frankfurt
+    dockerfilePath: ENGINE/deploy/Dockerfile
+    dockerContext: .
+    envVars:
+      - key: VUKA_DATABASE_URL
+        fromDatabase:
+          name: vuka-db
+          property: connectionString
+      - key: VUKA_FX_RWF_KES
+        value: "9.5"
+      - key: MTN_SIM_MODE
+        value: "success"
+      - key: VUKA_CORS_ORIGINS
+        value: "https://vuka.onrender.com"
+        # ⚠️ After Render creates the service, replace this with the real URL
+        # Render assigns (Settings -> Service URL). Same-origin API calls don't
+        # need CORS, so this only matters for direct cross-origin requests.
+      - key: VUKA_WEB_DIR
+        value: "/app/dist"
+
+databases:
+  - name: vuka-db
+    plan: free
+    databaseName: vuka
+    user: vuka

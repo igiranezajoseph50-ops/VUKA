@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>VUKA — Pitch Deck · BNR FinTech Hackathon 2026</title>
+<meta name="description" content="VUKA — the bridge and trade layer for East African cross-border SME payments. BNR FinTech Innovation Hackathon 2026, Stage 2 pitch deck." />
+<style>
+  :root {
+    --navy: #0F2D5A;
+    --navy-2: #16386f;
+    --emerald: #10B981;
+    --emerald-dark: #0b9468;
+    --paper: #f5f7fb;
+    --ink: #12294d;
+    --muted: #55688c;
+    --line: #dbe4f0;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+    background: var(--paper) repeating-linear-gradient(
+      0deg, transparent, transparent 31px, rgba(15, 45, 90, 0.05) 32px
+    ),
+    repeating-linear-gradient(
+      90deg, transparent, transparent 31px, rgba(15, 45, 90, 0.05) 32px
+    );
+    color: var(--ink);
+    line-height: 1.55;
+  }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 48px 24px 72px; }
+  header.brand {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap;
+    padding-bottom: 20px; border-bottom: 3px solid var(--emerald);
+    margin-bottom: 40px;
+  }
+  .logo {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--navy); font-weight: 800; font-size: 1.35rem; letter-spacing: -0.02em;
+  }
+  .logo .mark {
+    width: 42px; height: 42px; border-radius: 10px;
+    background: var(--navy); color: #fff;
+    display: grid; place-items: center; font-weight: 900; font-size: 1.1rem;
+  }
+  .logo .mark em { color: var(--emerald); font-style: normal; }
+  .brand .meta { text-align: right; font-size: 0.8rem; color: var(--muted); line-height: 1.4; }
+  .brand .meta strong { color: var(--navy); font-size: 0.9rem; display: block; }
+  .slide { background: #fff; border: 1px solid var(--line); border-radius: 14px; padding: 40px 44px; margin-bottom: 32px; box-shadow: 0 2px 10px rgba(15,45,90,0.06); }
+  .slide .tag { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--emerald-dark); background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.35); padding: 3px 10px; border-radius: 99px; margin-bottom: 18px; }
+  h1 { font-size: 1.7rem; color: var(--navy); line-height: 1.25; margin-bottom: 8px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.25rem; color: var(--navy); margin: 26px 0 12px; letter-spacing: -0.01em; }
+  h2:first-child { margin-top: 0; }
+  p { margin-bottom: 12px; color: var(--ink); }
+  ul, ol { margin: 0 0 14px 1.4em; color: var(--ink); }
+  li { margin-bottom: 8px; }
+  strong { color: var(--navy); }
+  .deck-footer { text-align: center; color: var(--muted); font-size: 0.8rem; margin-top: 8px; }
+  .cta { margin-top: 26px; display: flex; gap: 14px; flex-wrap: wrap; }
+  .cta a { display: inline-block; text-decoration: none; font-weight: 700; font-size: 0.95rem; padding: 11px 20px; border-radius: 10px; }
+  .cta .primary { background: var(--navy); color: #fff; }
+  .cta .primary:hover { background: var(--navy-2); }
+  .cta .ghost { background: transparent; color: var(--navy); border: 1.5px solid var(--navy); }
+  .cta .ghost:hover { background: rgba(15,45,90,0.06); }
+  .divider { height: 2px; background: linear-gradient(90deg, var(--navy), var(--emerald)); border: 0; margin: 34px 0; opacity: 0.35; }
+  @media (max-width: 640px) {
+    .slide { padding: 28px 22px; }
+    h1 { font-size: 1.35rem; }
+    .brand .meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="brand">
+    <div class="logo"><span class="mark">V<em>•</em></span> VUKA — Rise &amp; Cross Over</div>
+    <div class="meta">
+      <strong>National Bank of Rwanda · FinTech Innovation Hackathon 2026</strong>
+      Stage 2 Submission · Corridor: Rwanda ↔ Kenya (RWF ↔ KES) · MTN MoMo → M-Pesa
+    </div>
+  </header>
+
+  <section class="slide">
+    <span class="tag">Page 1 · Problem & Solution</span>
+    <h1>VUKA is the bridge and the trade layer for East Africa — one project, Phase 1 executed and running.</h1>
+
+    <h2>Problem statement</h2>
+    <p>East Africa's mobile-money networks — MTN MoMo, M-Pesa, Airtel Money, Tigo — are largely closed ecosystems that transact poorly across borders. A trader in Kigali paying a supplier in Nairobi or Kampala is often forced to withdraw cash, pay high fees, and wait days for funds to clear — or physically carry money across a border. Connectivity between providers is limited and immature.</p>
+    <p>Where cross-border movement does exist, it was built for personal remittances — not business trade. Five concrete gaps hit a small trader running a cross-border business:</p>
+    <ol>
+      <li><strong>Transaction limits</strong> far below what a real bulk trade payment requires.</li>
+      <li><strong>No invoice linkage</strong> — no way to tie a payment to a specific order, so neither party keeps a clear record of what was paid for.</li>
+      <li><strong>No business/personal separation</strong> — bookkeeping and tax preparation become nearly impossible.</li>
+      <li><strong>No visible trust history</strong> — new suppliers demand 50–60% upfront before goods ship.</li>
+      <li><strong>Blind USSD interfaces</strong> — no live confirmation, no visible exchange rate before committing, no reviewable history.</li>
+    </ol>
+    <p>The result: suppliers demand large upfront deposits, and SMEs cannot build the credit history lenders need to grow.</p>
+
+    <h2>Proposed solution</h2>
+    <p>VUKA is the bridge and the trade layer in one project. Its interoperability engine connects mobile-money wallets across borders, making cross-border movement instant and affordable without depending on banks or correspondent routing. On top of that bridge, VUKA provides the trader-facing layer personal remittance rails were never designed to give a business:</p>
+    <ul>
+      <li><strong>Invoice-linked payments</strong> — every transfer is tied to an order or invoice; both parties keep a clear, timestamped record of what the payment was for.</li>
+      <li><strong>Business and personal money, separated</strong> — enforced at the engine level: the first step toward bookkeeping, tax readiness, and credit history.</li>
+      <li><strong>Trade-sized transactions</strong> — limits and compliance designed for business-scale payments, not personal-remittance ceilings.</li>
+      <li><strong>Visible trust and payment history</strong> — a supplier can see a buyer's on-time record before agreeing terms, reducing upfront deposits.</li>
+      <li><strong>A real interface</strong> — live confirmation, a visible exchange rate before commitment, reviewable history, status from initiation to settlement.</li>
+    </ul>
+    <p>Every transfer is recorded on <strong>one double-entry ledger with two perspectives</strong>: the payer and the payee see the same immutable record — no reconciliation dispute.</p>
+    <div class="cta">
+      <a class="primary" href="./#/">See the working platform →</a>
+      <a class="ghost" href="https://bnr.rw" rel="noopener">BNR Hackathon</a>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section class="slide">
+    <span class="tag">Page 2 · Architecture &amp; Adoption</span>
+    <h1>Built on existing rails. Five layers, five non-negotiable reliability principles.</h1>
+
+    <h2>Solution architecture</h2>
+    <p>VUKA operates on existing mobile-money infrastructure rather than competing with it. The system is a five-layer architecture built for the reliability that moving real money requires:</p>
+    <ol>
+      <li><strong>Interoperability Engine</strong> — holds liquidity pools across telecom networks and rebalances funds across borders, avoiding dependence on banks or international correspondent routing.</li>
+      <li><strong>Messaging Standard Layer (ISO 20022)</strong> — translates every transaction into the global ISO 20022 format, eliminating the data mismatches that cause failed transfers and manual intervention.</li>
+      <li><strong>Bridge &amp; Ledger Engine (Go)</strong> — core money-movement logic with safe concurrency, so simultaneous transfers can never corrupt a balance.</li>
+      <li><strong>Ledger (PostgreSQL)</strong> — strict double-entry accounting: every transfer is a linked debit and credit that must net to zero; no balance is ever updated directly — balances are always derived.</li>
+      <li><strong>Dashboard (React)</strong> — the live, trader-facing interface: confirmation, transaction history, and status tracking.</li>
+    </ol>
+    <p>Five reliability principles are non-negotiable across every layer: <strong>double-entry bookkeeping</strong> for every transfer, <strong>idempotency keys</strong> to prevent duplicate charges, <strong>automatic reversal</strong> on partial failure, <strong>full end-to-end transaction tracing</strong>, and <strong>daily reconciliation</strong>.</p>
+
+    <h2>Current phase — demonstrated live</h2>
+    <p><strong>Phase 1 is implemented and running</strong> on the Rwanda–Kenya corridor (RWF ↔ KES at a live corridor rate): Go bridge/ledger engine (REST :8080, gRPC :50051), PostgreSQL double-entry ledger, invoice-linked cross-border settlement with idempotency keys, business/personal separation, and a React operator dashboard with live FX and realtime events. MTN MoMo and M-Pesa rail adapters are simulated behind a real adapter seam. ISO 20022 emission, live telecom API integration, and multi-network rebalancing are Phase 2 on the same roadmap.</p>
+
+    <h2>Adoption strategy</h2>
+    <ul>
+      <li><strong>Corridor-first.</strong> Launch the Rwanda–Kenya pilot on the mobile-money rails that already exist; prove the engine, then widen the bridge. VUKA does not replace payment rails — it builds the layer on top of them.</li>
+      <li><strong>Regulatory.</strong> Apply to the BNR FinTech sandbox and pursue a licensed path, leveraging active fintech passporting agreements with Ghana (February 2025) and Kenya (March 2026).</li>
+      <li><strong>Partners.</strong> Secure telecom or aggregator partner access (e.g. MTN, M-Pesa, or an existing aggregator) for real rail integration on the KES leg, and onboard a small cohort of real SME traders for pilot testing.</li>
+      <li><strong>Proof through the ledger.</strong> Every settled payment builds the trader's verifiable credit history — the wedge for lenders and trade finance, and the economic foundation for scaling beyond the corridor to Uganda, Tanzania, and the region.</li>
+    </ul>
+
+    <h2>Readiness for testing &amp; market deployment</h2>
+    <p>Phase 1 is implemented and running now: Go bridge/ledger engine, PostgreSQL double-entry ledger, invoice-linked cross-border settlement with idempotency keys, business/personal separation, and a React operator dashboard with live FX and realtime events — all working end to end on the Rwanda–Kenya corridor. Next milestones: live rail integration, ISO 20022 emission, and the BNR sandbox path.</p>
+
+    <div class="cta">
+      <a class="primary" href="./#/">Open the working platform →</a>
+      <a class="ghost" href="./#/invoices">View invoice ledger</a>
+    </div>
+  </section>
+
+  <p class="deck-footer">Built for Rwanda. Designed for Africa's traders. — Submitted to the National Bank of Rwanda FinTech Innovation Hackathon 2026 · Stage 2</p>
+</div>
+</body>
+</html>
