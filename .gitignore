@@ -31,3 +31,15 @@ __pycache__/
 .vscode/
 .idea/
 *.swp
+# Submission/internal docs kept locally but not on the public repo
+PITCH_DECK_2PAGES.md
+PITCH_DAY_RUNBOOK.md
+STAGE2_FORM_GUIDE.md
+STAGE2_SUBMISSION_PACK.md
+screenshots/
+profile.png
+FRONTEND/logo.png
+P-DESCRIPTION/ANALYSIS-ISSUES-LIMITATIONS.md
+P-DESCRIPTION/FRONTEND-STATIC-INVENTORY.md
+ENGINE/PHASE*-TODO.md
+ENGINE/VUKA_Backend_System_Architecture.docx
